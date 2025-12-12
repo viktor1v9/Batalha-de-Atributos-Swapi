@@ -2,21 +2,19 @@
 
 ## 📖 Descrição
 
-**SWAPI Batalha de atributos** é uma API REST desenvolvida com Spring Boot que oferece um jogo de batalha temático de Star Wars. A aplicação integra-se com a [SWAPI (Star Wars API)](https://swapi.dev/) para obter dados de personagens e permite criar batalhas onde dois personagens aleatórios competem com base em seus atributos de massa.
-
-Este é um projeto backend completo que fornece endpoints para iniciar batalhas e obter resultados de confrontos entre personagens do universo Star Wars de forma aleatória e dinâmica.
+API REST desenvolvida em Spring Boot que integra a SWAPI para realizar batalhas entre dois personagens aleatórios de Star Wars, comparando seus atributos (massa).
 
 ---
 
 ## ✨ Características
 
-- 🎮 **Jogo de Batalha Aleatória**: Seleciona dois personagens aleatórios de Star Wars
-- ⚔️ **Sistema de Confronto**: Determina o vencedor comparando a massa dos personagens
-- 🌐 **Integração com SWAPI**: Consome dados da API oficial de Star Wars
-- 📡 **API REST**: Endpoints bem definidos e RESTful
-- 🏗️ **Arquitetura Limpa**: Separação de responsabilidades com Controllers, Services e Clients
-- 🚀 **Spring Boot 4.0.0**: Framework moderno e robusto
-- 🔄 **OpenFeign**: Cliente HTTP declarativo para consumo de APIs externas
+- Seleção aleatória de personagens.
+
+- Comparação de atributos para determinar o vencedor.
+
+- Consumo da SWAPI via OpenFeign.
+
+- Arquitetura organizada em Controllers, Services e Clients.
 
 ---
 
@@ -113,46 +111,6 @@ curl -X GET http://localhost:8080/v1/battles/start
 
 ---
 
-## 🎨 Oportunidade: Contribuindo com um Frontend
-
-Este projeto oferece uma **excelente oportunidade para desenvolvê-lo com uma interface visual**! Se você deseja criar um **frontend interativo** para o jogo de batalha:
-
-### 💡 Sugestões de Implementação
-
-- **React/Vue.js/Angular**: Crie uma interface amigável para iniciar batalhas
-- **Animações**: Adicione efeitos visuais dos personagens em confronto
-- **Cards**: Exiba as informações dos personagens em cards atraentes
-- **Score/Histórico**: Mantenha registro das batalhas anteriores
-- **Temas Star Wars**: Aplique estilo temático do universo Star Wars
-
-### 🔗 Como Conectar
-
-Certifique-se de:
-
-1. A API está rodando em `http://localhost:8080`
-2. Configure CORS no backend, se necessário
-3. Chame o endpoint `GET /v1/battles/start` para cada nova batalha
-
-### 📚 Exemplo de Chamada Frontend
-
-```javascript
-// JavaScript/React Example
-const iniciarBatalha = async () => {
-  try {
-    const response = await fetch('http://localhost:8080/v1/battles/start');
-    const resultado = await response.json();
-    console.log(`${resultado.winner} venceu!`);
-  } catch (error) {
-    console.error('Erro ao iniciar batalha:', error);
-  }
-};
-```
-
----
-
-
-
-
 ## 🧪 Testes
 
 Para executar os testes unitários:
@@ -174,7 +132,6 @@ Ou:
 - **Spring Boot Starter WebMVC**: Framework web e REST
 - **Spring Cloud OpenFeign**: Cliente HTTP declarativo
 - **Lombok**: Redução de boilerplate de código
-- **Spring Boot Test**: Framework de testes
 
 Veja `pom.xml` para uma lista completa das dependências.
 
@@ -200,21 +157,33 @@ java -jar target/swapi-project-0.0.1-SNAPSHOT.jar
 
 ## 📝 Possíveis Melhorias Futuras
 
-- [ ] Adicionar mais atributos para comparação (altura, ano de nascimento, etc.)
-- [ ] Implementar autenticação e autorização
-- [ ] Adicionar cache para dados de personagens
-- [ ] Criar histórico de batalhas com persistência em banco de dados
-- [ ] Documentação Swagger/OpenAPI
-- [ ] Testes de integração com SWAPI
-- [ ] Tratamento de erros mais robusto
-- [ ] Métricas e monitoramento com Spring Actuator
+- Novos atributos de comparação
+
+- Persistência e histórico de batalhas
+
+- Documentação via Swagger
+
+- Cache e melhor tratamento de erros
+
+---
+
+## 💡 Sugestões de Implementação
+
+- **React/Vue.js/Angular:** Crie uma interface amigável para iniciar batalhas
+
+- **Animações:** Adicione efeitos visuais dos personagens em confronto
+
+- **Cards:** Exiba as informações dos personagens em cards atraentes
+
+- **Score/Histórico:** Mantenha registro das batalhas anteriores
+
+- **Temas Star Wars:** Aplique estilo temático do universo Star Wars
 
 ---
 
 ## 📄 Licença
 
-Este projeto está licenciado sob a **Licença MIT** - veja o arquivo [LICENSE](LICENSE) para detalhes completos.
-
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
@@ -225,17 +194,7 @@ Este projeto está licenciado sob a **Licença MIT** - veja o arquivo [LICENSE](
 
 ---
 
-## 📧 Contato e Suporte
-
-Se tiver dúvidas, sugestões ou encontrar problemas:
-
-- Abra uma **Issue** no repositório
-- Faça um **Pull Request** com melhorias
-- Entre em contato diretamente com o desenvolvedor
-
----
-
-**Desenvolvido com ❤️ usando Spring Boot e Java**
+**Desenvolvido com ❤️ por um grande fã de Star Wars usando Spring Boot e Java**
 
 **Divirta-se no jogo de batalha de Star Wars!** ⚔️🌌
 
